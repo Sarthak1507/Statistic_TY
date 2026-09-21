@@ -1,64 +1,86 @@
-# Statistic_TY 
-Closing Share Price Prediction
+# Statistics Analysis Project (StatsPro)
 
-## Project 
+A comprehensive Python project for statistical analysis of stock market data.
 
-This statistics mini-project analyses 500 daily closing share prices from 21 September 2023 to 24 September 2025. It follows the same data-to-model workflow as the reference project, but uses time-series features that are appropriate for share prices.
+## Project Structure
 
-## Objectives
-
-- Clean and validate the closing-price data.
-- Produce descriptive statistics and time-series visualisations.
-- Create lag and moving-average predictors using only previous trading days.
-- Fit a chronological linear-regression model.
-- Evaluate predictions with MAE, RMSE and R².
-- Explain the model's limitations.
-
-## Dataset
-
-`Data/StatsPro.xlsx` contains the supplied source workbook. The analysis reads the first 500 observations in `Sheet1`; the descriptive-statistics block below the data is deliberately excluded.
-
-Fields used:
-
-- `Date` — trading date
-- `Close Price` — daily closing share price
-
-Derived features:
-
-- `Lag_1` — previous trading day's closing price
-- `Lag_3` — closing price three trading days earlier
-- `MA_3` — trailing three-day moving average, shifted one day
-- `MA_5` — trailing five-day moving average, shifted one day
-
-## Project workflow
-
-Dataset → Cleaning → Exploratory analysis → Feature engineering → Chronological train/test split → Linear regression → Prediction → Evaluation → Interpretation
-
-## Structure
-
-```text
-share-price-statistics-project/
-├── Data/
-│   └── StatsPro.xlsx
-├── Report/
-│   └── Project_Report.md
-├── notebooks/
-│   ├── share_price_analysis.ipynb
-│   └── share_price_analysis.py
+```
+Statistics-TY/
+├── README.md
 ├── requirements.txt
-└── README.md
+├── data/
+│   └── StatsPro.xlsx
+├── scripts/
+│   ├── 01_data_loading.py
+│   ├── 02_descriptive_stats.py
+│   ├── 03_data_visualization.py
+│   ├── 04_trend_analysis.py
+│   ├── 05_normality_tests.py
+│   ├── 06_correlation_analysis.py
+│   ├── 07_hypothesis_testing.py
+│   └── 08_statistical_summary.py
+├── outputs/
+│   ├── statistics_report.csv
+│   ├── plots/
+│   └── analysis_results.txt
+└── utils/
+    ├── __init__.py
+    └── helpers.py
 ```
 
-## Run the analysis
+## Features
 
-```powershell
-cd share-price-statistics-project
-python -m pip install -r requirements.txt
-python notebooks/share_price_analysis.py
+- **Data Loading & Exploration**: Load and explore the dataset
+- **Descriptive Statistics**: Calculate mean, median, std, etc.
+- **Visualization**: Generate plots and charts
+- **Trend Analysis**: Analyze price trends and moving averages
+- **Normality Tests**: Shapiro-Wilk and Anderson-Darling tests
+- **Correlation Analysis**: Find correlations between variables
+- **Hypothesis Testing**: Perform t-tests and other statistical tests
+- **Statistical Summary**: Generate comprehensive reports
+
+## Installation
+
+```bash
+pip install -r requirements.txt
 ```
 
-The script saves charts and predictions to `outputs/` inside this project.
+## Usage
 
-## Important limitation
+Run scripts in order:
+```bash
+python scripts/01_data_loading.py
+python scripts/02_descriptive_stats.py
+python scripts/03_data_visualization.py
+python scripts/04_trend_analysis.py
+python scripts/05_normality_tests.py
+python scripts/06_correlation_analysis.py
+python scripts/07_hypothesis_testing.py
+python scripts/08_statistical_summary.py
+```
 
-The supplied dataset contains only past closing prices. This is an educational baseline, not investment advice and not a reliable trading system. A negative test R² would mean the model does not improve on predicting the test-period average.
+Or run individual analysis:
+```bash
+python scripts/03_data_visualization.py
+```
+
+## Requirements
+
+- Python 3.7+
+- pandas
+- numpy
+- scipy
+- matplotlib
+- seaborn
+- openpyxl
+
+## Output Files
+
+All analysis results are saved in the `outputs/` directory:
+- CSV files with statistical summaries
+- PNG plots and visualizations
+- Text reports with findings
+
+## Author
+
+Sarthak Karpe
