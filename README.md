@@ -7,7 +7,6 @@ A comprehensive Python project for statistical analysis of stock market data.
 ```
 Statistics-TY/
 ├── README.md
-├── requirements.txt
 ├── data/
 │   └── StatsPro.xlsx
 ├── scripts/
