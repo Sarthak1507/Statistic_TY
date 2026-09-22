@@ -1,85 +1,254 @@
-# Statistics Analysis Project (StatsPro)
+# 📊 Statistical Analysis Project
 
-A comprehensive Python project for statistical analysis of stock market data.
+## Statistical Analysis of Stock Market Data Using Python
 
-## Project Structure
+This project is a statistical analysis project developed using **Python and Jupyter Notebook**. It analyzes stock-market data and applies different statistical techniques such as descriptive statistics, data visualization, trend analysis, normality testing, correlation analysis, and hypothesis testing.
 
-```
-Statistics-TY/
-├── README.md
+---
+
+## 🎯 Project Objectives
+
+- Load and explore the stock-market dataset.
+- Clean and prepare the data for analysis.
+- Calculate descriptive statistical measures.
+- Create meaningful graphs and visualizations.
+- Analyze price trends and moving averages.
+- Perform normality tests.
+- Study relationships between variables using correlation analysis.
+- Perform hypothesis testing.
+- Generate a final statistical summary.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python**
+- **Jupyter Notebook**
+- **Pandas**
+- **NumPy**
+- **SciPy**
+- **Matplotlib**
+- **Seaborn**
+- **OpenPyXL**
+
+---
+
+## 📁 Project Structure
+
+```text
+Statistic_TY/
+│
 ├── data/
-│   └── StatsPro.xlsx
-├── scripts/
-│   ├── 01_data_loading.py
-│   ├── 02_descriptive_stats.py
-│   ├── 03_data_visualization.py
-│   ├── 04_trend_analysis.py
-│   ├── 05_normality_tests.py
-│   ├── 06_correlation_analysis.py
-│   ├── 07_hypothesis_testing.py
-│   └── 08_statistical_summary.py
+│   └── Statics_data.xlsx
+│
+├── notebook/
+│   ├── 01_data_loading.ipynb
+│   ├── 02_descriptive_stats.ipynb
+│   ├── 03_data_visualization.ipynb
+│   ├── 04_trend_analysis.ipynb
+│   ├── 05_normality_tests.ipynb
+│   ├── 06_correlation_analysis.ipynb
+│   ├── 07_hypothesis_testing.ipynb
+│   └── 08_statistical_summary.ipynb
+│
+├── Report/
+│   └── Project_Report.md
+│
 ├── outputs/
-│   ├── statistics_report.csv
-│   ├── plots/
-│   └── analysis_results.txt
-└── utils/
-    ├── __init__.py
-    └── helpers.py
+│   └── plots/
+│
+├── README.md
+├── QUICK_START.md
+├── JUPYTER_SETUP.md
+├── PROJECT_INDEX.md
+├── FILE_SUMMARY.md
+├── requirements.txt
+└── .gitignore
 ```
 
-## Features
+---
 
-- **Data Loading & Exploration**: Load and explore the dataset
-- **Descriptive Statistics**: Calculate mean, median, std, etc.
-- **Visualization**: Generate plots and charts
-- **Trend Analysis**: Analyze price trends and moving averages
-- **Normality Tests**: Shapiro-Wilk and Anderson-Darling tests
-- **Correlation Analysis**: Find correlations between variables
-- **Hypothesis Testing**: Perform t-tests and other statistical tests
-- **Statistical Summary**: Generate comprehensive reports
+## 📚 Analysis Modules
 
-## Installation
+### 1. Data Loading and Exploration
+Loads the Excel dataset and examines:
+
+- Dataset shape
+- Column information
+- Data types
+- Missing values
+- First and last records
+- Basic statistics
+
+### 2. Descriptive Statistics
+Calculates:
+
+- Mean
+- Median
+- Mode
+- Standard deviation
+- Variance
+- Minimum and maximum
+- Range
+- Quartiles
+- IQR
+- Skewness
+- Kurtosis
+- Coefficient of variation
+
+### 3. Data Visualization
+Creates visualizations including:
+
+- Stock price trend
+- Moving averages
+- Price distribution
+- Box plots
+- Q-Q plots
+- Daily returns
+- Rolling volatility
+
+### 4. Trend Analysis
+Analyzes:
+
+- Daily returns
+- Price changes
+- Moving averages
+- Overall price trend
+- Trend strength
+
+### 5. Normality Testing
+Applies statistical tests to examine whether selected variables follow a normal distribution.
+
+### 6. Correlation Analysis
+Studies relationships between numerical variables using correlation techniques such as:
+
+- Pearson correlation
+- Spearman correlation
+
+### 7. Hypothesis Testing
+Performs statistical tests including:
+
+- One-sample t-test
+- Paired t-test
+- Two-sample t-test
+- Mann-Whitney U test
+- Levene's test
+
+### 8. Statistical Summary
+Combines the analysis results into a final statistical summary and report.
+
+---
+
+## ⚙️ Installation
+
+### Step 1: Install Python
+
+Install Python 3.10 or newer.
+
+### Step 2: Clone the Repository
+
+```bash
+git clone https://github.com/Sarthak1507/Statistic_TY.git
+```
+
+### Step 3: Open the Project
+
+```bash
+cd Statistic_TY
+```
+
+### Step 4: Install Required Libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+---
 
-Run scripts in order:
+## ▶️ Running the Project
+
+Start Jupyter Notebook:
+
 ```bash
-python scripts/01_data_loading.py
-python scripts/02_descriptive_stats.py
-python scripts/03_data_visualization.py
-python scripts/04_trend_analysis.py
-python scripts/05_normality_tests.py
-python scripts/06_correlation_analysis.py
-python scripts/07_hypothesis_testing.py
-python scripts/08_statistical_summary.py
+jupyter notebook
 ```
 
-Or run individual analysis:
-```bash
-python scripts/03_data_visualization.py
+Open the `notebook` folder and execute the notebooks in the following order:
+
+```text
+01_data_loading.ipynb
+02_descriptive_stats.ipynb
+03_data_visualization.ipynb
+04_trend_analysis.ipynb
+05_normality_tests.ipynb
+06_correlation_analysis.ipynb
+07_hypothesis_testing.ipynb
+08_statistical_summary.ipynb
 ```
 
-## Requirements
+Running them in order is recommended because later analysis may use files generated by earlier notebooks.
 
-- Python 3.7+
-- pandas
-- numpy
-- scipy
-- matplotlib
-- seaborn
-- openpyxl
+---
 
-## Output Files
+## 📂 Dataset
 
-All analysis results are saved in the `outputs/` directory:
-- CSV files with statistical summaries
-- PNG plots and visualizations
-- Text reports with findings
+The project uses:
 
-## Author
+```text
+data/Statics_data.xlsx
+```
 
-Sarthak Karpe
+The dataset contains stock-market information used for statistical analysis.
+
+> The exact number of records, columns, date range, and statistical results should be taken from the executed notebooks rather than estimated in this README.
+
+---
+
+## 📊 Output
+
+The analysis can generate:
+
+- Cleaned dataset
+- Descriptive statistics
+- Correlation results
+- Normality-test results
+- Hypothesis-test results
+- Statistical summary
+- Graphs and plots
+
+Generated files are stored in:
+
+```text
+outputs/
+```
+
+Visualizations are stored in:
+
+```text
+outputs/plots/
+```
+
+---
+
+## 🎓 Academic Project
+
+**Student:** Sarthak Karpe  
+**Course:** B.Sc. Information Technology  
+**College:** Nowrosjee Wadia College, Pune  
+**Academic Year:** 2026–2027
+
+---
+
+## 👨‍💻 Author
+
+**Sarthak Karpe**
+
+GitHub: [Sarthak1507](https://github.com/Sarthak1507)
+
+---
+
+## 📌 Note
+
+This project is developed for academic and educational purposes to demonstrate the application of statistical analysis techniques using Python.
+
+Do not include confidential or personally identifiable information in a public repository.
